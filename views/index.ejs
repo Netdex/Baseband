@@ -1,30 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <div class="col-lg-3 col-md-3 col-sm-4" id="main-div">
-      <div class="list-group table-of-contents">
-        <a class="list-group-item" >Navbar</a>
-        <a class="list-group-item" >Buttons</a>
-        <a class="list-group-item" >Typography</a>
-        <a class="list-group-item" >Tables</a>
-        <a class="list-group-item" >Forms</a>
-        <a class="list-group-item" >Navs</a>
-        <a class="list-group-item" >Indicators</a>
-        <a class="list-group-item" >Progress bars</a>
-        <a class="list-group-item" >Containers</a>
-        <a class="list-group-item" >Dialogs</a>
-      </div>
+<head>
+    <title>Baseband</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet"
+          crossorigin="anonymous">
+</head>
+<body>
+<div id="div_information">
+    <div class="container">
+        <div id="div_jumbotron_introduction" class="jumbotron text-center">
+            <pre id="pre_information" style="white-space: pre-wrap"></pre>
+        </div>
     </div>
+</div>
+<div id="div_polling">
+    <div class="container">
+        <div id="div_jumbotron_introduction" class="jumbotron text-center">
+            <h1>Polling...</h1>
+            <h1><span class="glyphicon glyphicon-refresh spinning"></span></h1>
+            <h2>Waiting for the local probe to start...</h2>
+        </div>
+    </div>
+</div>
+<div id="div_not_windows">
+    <div class="container">
+        <div id="div_jumbotron_introduction" class="jumbotron text-center">
+            <h1>Sorry, you're not running Windows.</h1>
+            <h2>This tool was only made for analyzing the Microsoft Windows platform.</h2>
+        </div>
+    </div>
+</div>
+<div id="div_windows">
+    <div class="container">
+        <div id="div_jumbotron_introduction" class="jumbotron">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Terms of Service
+                </div>
+                <div class="panel-body">
+                    <p>Last updated: June 02, 2016</p>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+                    <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the
+                        https://0010.cf/ webpage (the "Service") operated by yume.netdex.cf ("us", "we", or "our").</p>
+
+                    <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these
+                        Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+
+                    <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part
+                        of the terms then you may not access the Service.</p>
+
+                    <p><strong>Extraction and Usage of Information</strong></p>
+
+                    <p>GApps APIs are used to determine the validity of your YRDSB student ID. The full code used to
+                        validate YRDSB student IDs is available
+                        <a href="https://a.desu.sh/pgrabx.txt">here</a>. The method used is not in violation of any
+                        board policy or terms of service. No information regarding the validity of YRDSB student IDs
+                        is stored on this server. No changes to your GApps account are made in this process.
+                        Your YRDSB student ID is used solely as a unique identifier,
+                        as a means of storing attendance for the operation of the RHHS Computer Science Club.</p>
+
+                    <p><strong>Circumvention of Security</strong></p>
+
+                    <p>You may not attempt to circumvent any security in place on the Service in an attempt to
+                        gain privileges or falsify data in any form. You may not automate any forms or interaction on
+                        the Service.</p>
+
+                    <p><strong>Links To Other Web Sites</strong></p>
+
+                    <p>Our Service may contain links to third-party web sites or services that are not owned or controlled
+                        by 0010.cf.</p>
+
+                    <p>0010.cf has no control over, and assumes no responsibility for, the content, privacy policies, or
+                        practices of any third party web sites or services. You further acknowledge and agree that 0010.cf
+                        shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged
+                        to be caused by or in connection with use of or reliance on any such content, goods or services
+                        available on or through any such web sites or services.</p>
+
+                    <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web
+                        sites or services that you visit.</p>
+
+                    <p><strong>Termination</strong></p>
+
+                    <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for
+                        any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+                    <p>All provisions of the Terms which by their nature should survive termination shall survive
+                        termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity
+                        and limitations of liability.</p>
+
+                    <p><strong>Governing Law</strong></p>
+
+                    <p>These Terms shall be governed and construed in accordance with the laws of Ontario, Canada, without
+                        regard to its conflict of law provisions.</p>
+
+                    <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those
+                        rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the
+                        remaining provisions of these Terms will remain in effect. These Terms constitute the entire
+                        agreement between us regarding our Service, and supersede and replace any prior agreements we might
+                        have between us regarding the Service.</p>
+
+                    <p><strong>Changes</strong></p>
+
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a
+                        revision is material we will try to provide at least 30 days notice prior to any new terms taking
+                        effect. What constitutes a material change will be determined at our sole discretion.</p>
+
+                    <p>By continuing to access or use our Service after those revisions become effective, you agree to be
+                        bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+
+                    <p><strong>Liability</strong></p>
+
+                    <p>The software is provided "as is" and the author disclaims all warranties with regard to this software
+                        including all implied warranties of merchantability and fitness. In no event shall the author be
+                        liable for any special, direct, indirect, or consequential damages or any damages whatsoever
+                        resulting from loss of use, data or profits, whether in an action of contract, negligence or other
+                        tortious action, arising out of or in connection with the use or performance of this software.</p>
+
+                    <p><strong>Contact Us</strong></p>
+
+                    <p>If you have any questions about these Terms, please contact us.</p>
+                </div>
+                <div class="panel-footer pull-right">
+                    <div>
+                        <a id="btn_terms_decline" href="#" class="btn btn-default btn-sm btn-danger">I Decline</a>
+                        <a id="btn_terms_accept" href="#" class="btn btn-default btn-sm btn-success">I Accept</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="div_introduction">
+    <div class="container">
+        <div id="div_jumbotron_introduction" class="jumbotron text-center">
+            <h1 id="h1_title_baseband">Baseband</h1>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/javascripts/baseband.js"></script>
+</body>
 </html>
