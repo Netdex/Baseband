@@ -12,6 +12,24 @@
     width: 80%;
 }
 
+div.thumbnail_step > div.thumbhead {
+    padding: 5px;
+    background-color: #146fff;
+    color: white;
+    font-weight:700;
+    font-variant: small-caps;
+}
+
+div.thumbnail_step > img {
+    margin: 0;
+    width:100%
+}
+
+div.thumbnail_step > div.caption {
+    background-color: #1070ee;
+    color:white;
+    font-variant: small-caps;
+}
 .glyphicon.spinning {
     animation: spin 1s infinite linear;
     -webkit-animation: spin2 1s infinite linear;

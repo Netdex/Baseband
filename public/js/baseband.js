@@ -197,10 +197,7 @@
 //    );
 
 function init() {
-    $("#div_information").velocity("fadeOut", {duration: 0});
-    $("#div_not_windows").velocity("fadeOut", {duration: 0});
-    $("#div_windows").velocity("fadeOut", {duration: 0});
-    $("#div_polling").velocity("fadeOut", {duration: 0});
+
 }
 
 function fade_intro(callback) {
@@ -224,7 +221,7 @@ function discern_os(callback) {
 }
 
 function begin_poll(callback) {
-    $("#div_polling").velocity("fadeIn", {duration: 500, complete: callback});
+    $("#div_polling").velocity("fadeIn", {duration: 500});
     poll(function (data) {
         callback(data);
     });
@@ -259,13 +256,15 @@ function display_info(data, callback) {
 
 $(function () {
     init();
-    fade_intro(function () {
-        discern_os(function () {
-            begin_poll(function (data) {
-                display_info(data, function () {
-
-                });
-            });
-        });
-    });
+    $("#div_introduction").velocity("fadeOut", {delay: 0, duration: 0});
+    $("#div_download").velocity("fadeIn", {delay: 0, duration: 0});
+    // fade_intro(function () {
+    //     discern_os(function () {
+    //         begin_poll(function (data) {
+    //             display_info(data, function () {
+    //
+    //             });
+    //         });
+    //     });
+    // });
 });
