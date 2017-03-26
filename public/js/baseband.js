@@ -1,3 +1,7 @@
+jQuery.fn.outerHTML = function () {
+    return jQuery('<div />').append(this.eq(0).clone()).html();
+};
+
 /**
  * JavaScript Client Detection
  * (C) viazenetti GmbH (Christian Ludwig)
@@ -249,27 +253,62 @@ function poll(callback) {
     });
 }
 
+function generate_info_block(datum) {
+    var col = "danger";
+    if (datum.Score > 80)
+        col = "primary";
+    else if (datum.Score > 60)
+        col = "success";
+    else if (datum.Score > 40)
+        col = "warning";
+
+    var unit = $(
+        "<div class='panel panel-default panel-" + col + "'>" +
+        "   <div class='panel-heading'>" +
+        "       <h3><b>" + datum.Name + "</b></h3>" +
+        "   </div>" +
+        "   <div class='panel-body'>" +
+        "       <div class='row'>" +
+        "           <div class='col-md-6'>" +
+        "       <p><b>What is this?</b>" +
+        "       " + datum.Details + "</p>" +
+        "</div><div class='col-md-6'>" +
+        "       <p><b>What about me?</b>" +
+        "       " + datum.NextSteps + "</p>" +
+        "           </div>" +
+        "       </div>" +
+        "   </div>" +
+        "</div>");
+    return unit;
+
+}
 function display_info(data, callback) {
     $("#pre_information").text(JSON.stringify(data));
     $("#div_information").velocity("fadeIn", {duration: 500, complete: callback});
+    var loc = $("#div_block_location");
+    for (var i = 0; i < data.modules.length; i++) {
+        var unit = generate_info_block(data.modules[i]);
+        unit.appendTo(loc);
+    }
 }
 
 function download(callback) {
-    $("#div_actual_download").velocity("fadeIn", {duration: 500});
+    $("#div_download").velocity("fadeIn", {duration: 500});
     $("#btn_download").on('click', function () {
-        $("#div_actual_download").velocity("fadeOut", {duration: 500, complete: callback});
+        $("#div_download").velocity("fadeOut", {duration: 500, complete: callback});
     });
 }
 
 $(function () {
     init();
-    //$("#div_introduction").velocity("fadeOut", {delay: 0, duration: 0});
-    //$("#div_download").velocity("fadeIn", {delay: 0, duration: 0});
+    // $("#div_introduction").velocity("fadeOut", {delay: 0, duration: 0});
+    // $("#div_download").velocity("fadeIn", {delay: 0, duration: 0});
     fade_intro(function () {
         discern_os(function () {
             download(function () {
                 begin_poll(function (data) {
                     display_info(data, function () {
+
                     });
                 });
             });
