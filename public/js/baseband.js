@@ -216,9 +216,6 @@ function discern_os(callback) {
     else {
         $("#div_windows").velocity("fadeIn", {duration: 500});
     }
-    $("#btn_terms_decline").on('click', function (e) {
-        window.location = "https://google.com";
-    });
     $("#btn_terms_accept").on('click', function (e) {
         $("#div_windows").velocity("fadeOut", {duration: 500, complete: callback});
     });

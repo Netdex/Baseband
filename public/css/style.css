@@ -42,6 +42,13 @@ div.thumbnail_step > div.caption {
     font-variant: small-caps;
 }
 
+.div_wait_analysis {
+    background-color: #1070ee;
+    padding: 10px;
+    color: white;
+    margin: 0
+}
+
 .score-block {
     text-align: center;
     font-weight: 500;
