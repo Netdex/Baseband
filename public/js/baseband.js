@@ -273,6 +273,12 @@ function generate_info_block(datum) {
         "       <p><b>What about me?</b>" +
         "       " + datum.NextSteps + "</p>" +
         "           </div>" +
+        "       <div class='col-md-12'>" +
+        "       <div class='progress progress-striped'>" +
+        "       <div class='progress-bar progress-bar-info' style='width: "+ datum.score +"%'>" +
+        "                  </div>" +
+        "               </div>" +
+        "           </div>" +
         "       </div>" +
         "   </div>" +
         "</div>");
