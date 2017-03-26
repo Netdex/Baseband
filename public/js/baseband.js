@@ -275,7 +275,7 @@ function generate_info_block(datum) {
         "           </div>" +
         "       <div class='col-md-12'>" +
         "       <div class='progress progress-striped'>" +
-        "       <div class='progress-bar progress-bar-info' style='width: "+ datum.score +"%'>" +
+        "       <div class='progress-bar progress-bar-" + col + "' style='width: "+ datum.score +"%'>" +
         "                  </div>" +
         "               </div>" +
         "           </div>" +
