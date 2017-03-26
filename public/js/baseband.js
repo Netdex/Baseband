@@ -254,17 +254,25 @@ function display_info(data, callback) {
     $("#div_information").velocity("fadeIn", {duration: 500, complete: callback});
 }
 
+function download(callback) {
+    $("#div_actual_download").velocity("fadeIn", {duration: 500});
+    $("#btn_download").on('click', function () {
+        $("#div_actual_download").velocity("fadeOut", {duration: 500, complete: callback});
+    });
+}
+
 $(function () {
     init();
-    $("#div_introduction").velocity("fadeOut", {delay: 0, duration: 0});
-    $("#div_download").velocity("fadeIn", {delay: 0, duration: 0});
-    // fade_intro(function () {
-    //     discern_os(function () {
-    //         begin_poll(function (data) {
-    //             display_info(data, function () {
-    //
-    //             });
-    //         });
-    //     });
-    // });
+    //$("#div_introduction").velocity("fadeOut", {delay: 0, duration: 0});
+    //$("#div_download").velocity("fadeIn", {delay: 0, duration: 0});
+    fade_intro(function () {
+        discern_os(function () {
+            download(function () {
+                begin_poll(function (data) {
+                    display_info(data, function () {
+                    });
+                });
+            });
+        });
+    });
 });

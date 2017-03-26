@@ -4,6 +4,13 @@
     text-align: center;
 }
 
+#btn_download {
+    margin-bottom: 2em;
+    -webkit-box-shadow: #777 5px 5px 7px;
+    -moz-box-shadow: #777 5px 5px 7px;
+    box-shadow: #777 5px 5px 7px;
+}
+
 #div_jumbotron_introduction {
     position: absolute;
     top: 10%;
@@ -11,7 +18,20 @@
     transform: translateX(-50%);
     width: 80%;
 }
+#btn_introduction {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
 
+div.thumbnail_step {
+    -webkit-box-shadow: #777 5px 5px 7px;
+    -moz-box-shadow: #777 5px 5px 7px;
+    box-shadow: #777 5px 5px 7px;
+    background-color: rgba(0,0,0,0);
+}
 div.thumbnail_step > div.thumbhead {
     padding: 5px;
     background-color: #146fff;
