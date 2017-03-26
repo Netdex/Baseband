@@ -27,17 +27,18 @@
 }
 
 div.thumbnail_step {
-    -webkit-box-shadow: #777 5px 5px 7px;
+/*    -webkit-box-shadow: #777 5px 5px 7px;
     -moz-box-shadow: #777 5px 5px 7px;
     box-shadow: #777 5px 5px 7px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0);*/
+    padding: 0px;
 }
 div.thumbnail_step > div.thumbhead {
-    padding: 5px;
+/*    padding: 5px;
     background-color: #146fff;
     color: white;
     font-weight:700;
-    font-variant: small-caps;
+    font-variant: small-caps;*/
 }
 
 div.thumbnail_step > img {
