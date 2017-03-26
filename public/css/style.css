@@ -6,9 +6,9 @@
 
 #btn_download {
     margin-bottom: 2em;
-    -webkit-box-shadow: #777 5px 5px 7px;
-    -moz-box-shadow: #777 5px 5px 7px;
-    box-shadow: #777 5px 5px 7px;
+    -webkit-box-shadow: #aaa 3px 3px 10px;
+    -moz-box-shadow: #aaa 3px 3px 10px;
+    box-shadow: #aaa 3px 3px 10px;
 }
 
 #div_jumbotron_introduction {
@@ -42,9 +42,10 @@ div.thumbnail_step > div.caption {
     font-variant: small-caps;
 }
 
-.div_wait_analysis {
+.div_magic {
     background-color: #1070ee;
-    padding: 10px;
+    padding: 15px 15px 15px 50px;
+    
     color: white;
     margin: 0
 }
