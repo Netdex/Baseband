@@ -274,7 +274,7 @@ function generate_info_block(datum) {
         "       " + datum.NextSteps + "</p>" +
         "           </div>" +
         "       <div class='col-md-12'>" +
-        "       <div class='progress progress-striped' style='height:50px'>" +
+        "       <div class='progress progress-striped' style='height:30px'>" +
         "       <div class='progress-bar progress-bar-" + col + "' style='width: "+ datum.Score +"%'>" +
         "                  </div>" +
         "               </div>" +
